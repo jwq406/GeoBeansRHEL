@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/examp2">
+        <file>Resources/mActionAddLayer.png</file>
+        <file>Resources/mActionZoomOut.png</file>
+        <file>Resources/mActionPan.png</file>
+        <file>Resources/mActionZoomIn.png</file>
+        <file>Resources/mActionZoomFullExtent.png</file>
+        <file>Resources/mActionSelect.png</file>
+        <file>Resources/mActionAddVertex.png</file>
+        <file>Resources/mActionDeleteSelected.png</file>
+        <file>Resources/mActionDeleteVertex.png</file>
+        <file>Resources/srs.db</file>
+        <file>Resources/ZoomIn.png</file>
+        <file>Resources/ZoomOut.png</file>
+    </qresource>
+</RCC>

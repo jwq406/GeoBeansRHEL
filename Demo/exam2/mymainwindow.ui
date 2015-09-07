@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>myMainWindow</class>
+ <widget class="QMainWindow" name="myMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>974</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GeoBeans&amp;地网软件-网络标绘打印系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="mymainwindowres.qrc">
+    <normaloff>:/Resources/BFMapMaker.ico</normaloff>:/Resources/BFMapMaker.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>974</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpenProject"/>
+    <addaction name="actionSaveProject"/>
+    <addaction name="actionSaveAsProject"/>
+    <addaction name="actionCloseProject"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrintMap"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuLayer">
+    <property name="title">
+     <string>图层</string>
+    </property>
+    <widget class="QMenu" name="menuAddLayer">
+     <property name="title">
+      <string>添加图层</string>
+     </property>
+     <addaction name="actionAddVectorLayer"/>
+     <addaction name="actionAddRaterLayer"/>
+     <addaction name="actionMapService"/>
+    </widget>
+    <widget class="QMenu" name="menuSetDispScale">
+     <property name="title">
+      <string>设置显示比例</string>
+     </property>
+     <addaction name="actionSetMaxDispScale"/>
+     <addaction name="actionSetMinDispScale"/>
+    </widget>
+    <addaction name="menuAddLayer"/>
+    <addaction name="actionAddGroupLayer"/>
+    <addaction name="actionRemoveLayer"/>
+    <addaction name="menuSetDispScale"/>
+   </widget>
+   <widget class="QMenu" name="menuBookMark">
+    <property name="title">
+     <string>书签</string>
+    </property>
+    <addaction name="actionCreateBookMark"/>
+    <addaction name="actionBookMarkManager"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>视图</string>
+    </property>
+    <addaction name="actionLayOut"/>
+    <addaction name="actionFullScrenn"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoomout"/>
+    <addaction name="actionMove"/>
+    <addaction name="actionRefresh"/>
+    <addaction name="actionFullMap"/>
+    <addaction name="actionPreviousView"/>
+    <addaction name="actionNextView"/>
+   </widget>
+   <widget class="QMenu" name="menuMeasure">
+    <property name="title">
+     <string>量算分析</string>
+    </property>
+    <addaction name="actionDist"/>
+    <addaction name="actionArea"/>
+    <addaction name="actionMeasureAngle"/>
+    <addaction name="actionMeasureFlyTime"/>
+    <addaction name="separator"/>
+    <addaction name="actionBufferAnalysis"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionPntSel"/>
+    <addaction name="actionSelectFeatures"/>
+    <addaction name="actionCircleSel"/>
+    <addaction name="actionPolygonSel"/>
+    <addaction name="actionClear"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="actionOpenSymbolLibrary"/>
+    <addaction name="separator"/>
+    <addaction name="actionDataMerge"/>
+    <addaction name="actionOpenPolySymbols"/>
+    <addaction name="actionOpenPntSymbols"/>
+    <addaction name="actionOpenLineSymbols"/>
+    <addaction name="actionLayerAnalysis"/>
+    <addaction name="separator"/>
+    <addaction name="actionOptions"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionHelpDocs"/>
+   </widget>
+   <widget class="QMenu" name="menuMap">
+    <property name="title">
+     <string>地图</string>
+    </property>
+    <addaction name="actionSQLQuery"/>
+    <addaction name="actionMapProperties"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuMap"/>
+   <addaction name="menuLayer"/>
+   <addaction name="menuBookMark"/>
+   <addaction name="menuView"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuMeasure"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomout"/>
+   <addaction name="actionMove"/>
+   <addaction name="actionRefresh"/>
+   <addaction name="actionFullMap"/>
+   <addaction name="actionPreviousView"/>
+   <addaction name="actionNextView"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpenProject"/>
+   <addaction name="actionCloseProject"/>
+   <addaction name="actionSaveProject"/>
+   <addaction name="actionPrintMap"/>
+   <addaction name="separator"/>
+   <addaction name="actionAddGroupLayer"/>
+   <addaction name="actionAddVectorLayer"/>
+   <addaction name="actionAddRaterLayer"/>
+   <addaction name="actionMapService"/>
+   <addaction name="actionRemoveLayer"/>
+   <addaction name="separator"/>
+   <addaction name="actionPntSel"/>
+   <addaction name="actionSelectFeatures"/>
+   <addaction name="actionCircleSel"/>
+   <addaction name="actionPolygonSel"/>
+   <addaction name="actionClear"/>
+   <addaction name="separator"/>
+   <addaction name="actionDist"/>
+   <addaction name="actionArea"/>
+   <addaction name="separator"/>
+   <addaction name="actionLine"/>
+   <addaction name="actionZone"/>
+   <addaction name="actionText"/>
+   <addaction name="actionSVG"/>
+   <addaction name="separator"/>
+   <addaction name="actionLayOut"/>
+   <addaction name="actionFullScrenn"/>
+   <addaction name="action3DView"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionOpenProject">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionOpenProject.png</normaloff>:/Resources/mActionOpenProject.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开地图工程</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionCloseProject">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionCloseProject.png</normaloff>:/Resources/mActionCloseProject.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭地图工程</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionExit.png</normaloff>:/Resources/mActionExit.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出 </string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAddVectorLayer">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionAddVectorLayer.png</normaloff>:/Resources/mActionAddVectorLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加矢量图层</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAddRaterLayer">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionAddRasterLayer.png</normaloff>:/Resources/mActionAddRasterLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加栅格图层</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/ZoomOut.png</normaloff>:/Resources/ZoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionZoomout">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/ZoomIn.png</normaloff>:/Resources/ZoomIn.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionMove">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionPan.png</normaloff>:/Resources/mActionPan.png</iconset>
+   </property>
+   <property name="text">
+    <string>平移</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionRemoveLayer">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionRemoveLayer.png</normaloff>:/Resources/mActionRemoveLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>移除图层(组)</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSelectFeatures">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionRectSelection.png</normaloff>:/Resources/mActionRectSelection.png</iconset>
+   </property>
+   <property name="text">
+    <string>框选</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionClearSelection.png</normaloff>:/Resources/mActionClearSelection.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除选择</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionDist">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionMeasureDistance.png</normaloff>:/Resources/mActionMeasureDistance.png</iconset>
+   </property>
+   <property name="text">
+    <string>测量距离</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionArea">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionMeasureArea.png</normaloff>:/Resources/mActionMeasureArea.png</iconset>
+   </property>
+   <property name="text">
+    <string>测量面积</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionText">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionText.png</normaloff>:/Resources/mActionText.png</iconset>
+   </property>
+   <property name="text">
+    <string>文本</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSVG">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionSVG.png</normaloff>:/Resources/mActionSVG.png</iconset>
+   </property>
+   <property name="text">
+    <string>SVG</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionLine">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionDrawLine.png</normaloff>:/Resources/mActionDrawLine.png</iconset>
+   </property>
+   <property name="text">
+    <string>航线绘制</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionZone">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionDrawPolygon.png</normaloff>:/Resources/mActionDrawPolygon.png</iconset>
+   </property>
+   <property name="text">
+    <string>区域绘制</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionRefresh.png</normaloff>:/Resources/mActionRefresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>刷新</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionFullMap">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionFullMap.png</normaloff>:/Resources/mActionFullMap.png</iconset>
+   </property>
+   <property name="text">
+    <string>全图显示</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionPreviousView">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionPrevious.png</normaloff>:/Resources/mActionPrevious.png</iconset>
+   </property>
+   <property name="text">
+    <string>前一视图</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionNextView">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionNext.png</normaloff>:/Resources/mActionNext.png</iconset>
+   </property>
+   <property name="text">
+    <string>后一视图</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionMapService">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionAddMapService.png</normaloff>:/Resources/mActionAddMapService.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加地图服务</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAddGroupLayer">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionAddGroupLayer.png</normaloff>:/Resources/mActionAddGroupLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>添加图层组</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSetMaxDispScale">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>设置最大显示比例</string>
+   </property>
+  </action>
+  <action name="actionSetMinDispScale">
+   <property name="text">
+    <string>设置最小显示比例</string>
+   </property>
+  </action>
+  <action name="actionCircleSel">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionCircleSelection.png</normaloff>:/Resources/mActionCircleSelection.png</iconset>
+   </property>
+   <property name="text">
+    <string>圆选</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionPolygonSel">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionPolySelection.png</normaloff>:/Resources/mActionPolySelection.png</iconset>
+   </property>
+   <property name="text">
+    <string>多边形选</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionCreateBookMark">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionAddBookmark.png</normaloff>:/Resources/mActionAddBookmark.png</iconset>
+   </property>
+   <property name="text">
+    <string>创建...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionBookMarkManager">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionBookmarkManager.png</normaloff>:/Resources/mActionBookmarkManager.png</iconset>
+   </property>
+   <property name="text">
+    <string>管理...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSaveProject">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionSaveProject.png</normaloff>:/Resources/mActionSaveProject.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存地图工程</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSaveAsProject">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionSaveAsProject.png</normaloff>:/Resources/mActionSaveAsProject.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionPntSel">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionPntSelection.png</normaloff>:/Resources/mActionPntSelection.png</iconset>
+   </property>
+   <property name="text">
+    <string>点选</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionAbout.png</normaloff>:/Resources/mActionAbout.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionHelpDocs">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionHelpDocs.png</normaloff>:/Resources/mActionHelpDocs.png</iconset>
+   </property>
+   <property name="text">
+    <string>帮助文档</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionOpenSymbolLibrary">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionOpenSymbolLibrary.png</normaloff>:/Resources/mActionOpenSymbolLibrary.png</iconset>
+   </property>
+   <property name="text">
+    <string>符号库...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionOpenPntSymbols">
+   <property name="text">
+    <string>投影变换</string>
+   </property>
+  </action>
+  <action name="actionOpenLineSymbols">
+   <property name="text">
+    <string>地图裁剪</string>
+   </property>
+  </action>
+  <action name="actionOpenPolySymbols">
+   <property name="text">
+    <string>数据配准</string>
+   </property>
+  </action>
+  <action name="actionOptions">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionOptions.png</normaloff>:/Resources/mActionOptions.png</iconset>
+   </property>
+   <property name="text">
+    <string>选项...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionLayOut">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionLayOut.png</normaloff>:/Resources/mActionLayOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>显示排版打印</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionPrintMap">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionPrint.png</normaloff>:/Resources/mActionPrint.png</iconset>
+   </property>
+   <property name="text">
+    <string>打印...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionFullScrenn">
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mActionFullScreen.png</normaloff>:/Resources/mActionFullScreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>全屏显示</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionDataMerge">
+   <property name="text">
+    <string>数据合并</string>
+   </property>
+  </action>
+  <action name="actionMeasureAngle">
+   <property name="text">
+    <string>测量角度</string>
+   </property>
+  </action>
+  <action name="actionMeasureFlyTime">
+   <property name="text">
+    <string>飞行时间计算</string>
+   </property>
+  </action>
+  <action name="actionLayerAnalysis">
+   <property name="text">
+    <string>图层运算</string>
+   </property>
+  </action>
+  <action name="actionBufferAnalysis">
+   <property name="text">
+    <string>缓充区分析</string>
+   </property>
+  </action>
+  <action name="actionSQLQuery">
+   <property name="text">
+    <string>SQL查询</string>
+   </property>
+  </action>
+  <action name="actionMapProperties">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>地图属性</string>
+   </property>
+  </action>
+  <action name="action3DView">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="mymainwindowres.qrc">
+     <normaloff>:/Resources/mAction3DView.png</normaloff>:/Resources/mAction3DView.png</iconset>
+   </property>
+   <property name="text">
+    <string>三维窗口</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="mymainwindowres.qrc"/>
+ </resources>
+ <connections/>
+</ui>

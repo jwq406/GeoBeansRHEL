@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>examp2Class</class>
+ <widget class="QMainWindow" name="examp2Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>745</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>examp2</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="MapWindow" native="true">
+      <property name="cursor">
+       <cursorShape>CrossCursor</cursorShape>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(74, 255, 74);</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>780</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="qtID_File">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="qtID_AddVector"/>
+    <addaction name="separator"/>
+    <addaction name="qtID_Exit"/>
+   </widget>
+   <widget class="QMenu" name="qtID_Draw">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>绘图工具(&amp;D)</string>
+    </property>
+    <addaction name="qtID_PolyLine"/>
+    <addaction name="qtID_Polygon"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>飞行控制</string>
+    </property>
+    <addaction name="OpenFly"/>
+   </widget>
+   <addaction name="qtID_File"/>
+   <addaction name="qtID_Draw"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="qtID_ZoomIn"/>
+   <addaction name="qtID_ZoomOut"/>
+   <addaction name="qtID_Pan"/>
+   <addaction name="qtID_FullShow"/>
+   <addaction name="separator"/>
+   <addaction name="mActionSelectRadius"/>
+   <addaction name="mActionSelectFeatures"/>
+   <addaction name="mActionDeselectAll"/>
+   <addaction name="qtID_SelectFeature"/>
+   <addaction name="qtID_DeleFeature"/>
+   <addaction name="separator"/>
+   <addaction name="qtID_GetAttribute"/>
+   <addaction name="separator"/>
+   <addaction name="actionMeasureDist"/>
+   <addaction name="mActionMeasureArea"/>
+   <addaction name="separator"/>
+   <addaction name="mActionTextAnnotation"/>
+   <addaction name="mActionSvgAnnotation"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="LegenddockWidget">
+   <property name="minimumSize">
+    <size>
+     <width>122</width>
+     <height>364</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>图层信息查询</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>选择图层</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="movement">
+        <enum>QListView::Static</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>图层字段</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget_2"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>属性值</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listWidget_3">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="LayerControlWidget">
+   <property name="minimumSize">
+    <size>
+     <width>206</width>
+     <height>298</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>图层控制</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <property name="leftMargin">
+      <number>4</number>
+     </property>
+     <property name="topMargin">
+      <number>4</number>
+     </property>
+     <property name="rightMargin">
+      <number>4</number>
+     </property>
+     <property name="bottomMargin">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="leftMargin">
+         <number>4</number>
+        </property>
+        <property name="topMargin">
+         <number>4</number>
+        </property>
+        <property name="rightMargin">
+         <number>4</number>
+        </property>
+        <property name="bottomMargin">
+         <number>4</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>显示/隐藏图层</string>
+          </property>
+          <widget class="QCheckBox" name="checkBox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>121</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>city</string>
+           </property>
+           <property name="icon">
+            <iconset resource="examp2.qrc">
+             <normaloff>:/examp2/Resources/mActionAddLayer.png</normaloff>:/examp2/Resources/mActionAddLayer.png</iconset>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>48</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>river</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>71</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>country</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>图层注记</string>
+          </property>
+          <widget class="QCheckBox" name="checkBox_4">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>23</y>
+             <width>81</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>city</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBox_5">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>46</y>
+             <width>48</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>river</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="qtID_AddVector">
+   <property name="text">
+    <string>加载矢量图(&amp;V)</string>
+   </property>
+  </action>
+  <action name="qtID_ZoomIn">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/ZoomOut.png</normaloff>:/examp2/Resources/ZoomOut.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大图层</string>
+   </property>
+   <property name="toolTip">
+    <string>放大图层</string>
+   </property>
+  </action>
+  <action name="qtID_ZoomOut">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/ZoomIn.png</normaloff>:/examp2/Resources/ZoomIn.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小图层</string>
+   </property>
+   <property name="toolTip">
+    <string>缩小图层</string>
+   </property>
+  </action>
+  <action name="qtID_Pan">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/mActionPan.png</normaloff>:/examp2/Resources/mActionPan.png</iconset>
+   </property>
+   <property name="text">
+    <string>移动图层</string>
+   </property>
+  </action>
+  <action name="qtID_FullShow">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/ALl.png</normaloff>:/examp2/Resources/ALl.png</iconset>
+   </property>
+   <property name="text">
+    <string>全图显示</string>
+   </property>
+   <property name="toolTip">
+    <string>全图显示</string>
+   </property>
+  </action>
+  <action name="qtID_Exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="qtID_SelectFeature">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/mActionSelect.png</normaloff>:/examp2/Resources/mActionSelect.png</iconset>
+   </property>
+   <property name="text">
+    <string>选择图层要素</string>
+   </property>
+   <property name="toolTip">
+    <string>选择图层特征要素</string>
+   </property>
+  </action>
+  <action name="qtID_DeleFeature">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/mActionDeleteSelected.png</normaloff>:/examp2/Resources/mActionDeleteSelected.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除选择的特征要素</string>
+   </property>
+   <property name="toolTip">
+    <string>删除选择的特征要素</string>
+   </property>
+  </action>
+  <action name="qtID_GetAttribute">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/mActionAddLayer.png</normaloff>:/examp2/Resources/mActionAddLayer.png</iconset>
+   </property>
+   <property name="text">
+    <string>当前选择图元的属性数据</string>
+   </property>
+   <property name="toolTip">
+    <string>得到当前选择图元的属性数据</string>
+   </property>
+  </action>
+  <action name="qtID_PolyLine">
+   <property name="text">
+    <string>绘制折线(&amp;L)</string>
+   </property>
+  </action>
+  <action name="qtID_Polygon">
+   <property name="text">
+    <string>绘制多边形(&amp;P)</string>
+   </property>
+  </action>
+  <action name="OpenFly">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="actionMeasureDist">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/MeaDist.png</normaloff>:/examp2/Resources/MeaDist.png</iconset>
+   </property>
+   <property name="text">
+    <string>测距</string>
+   </property>
+   <property name="toolTip">
+    <string>测量距离</string>
+   </property>
+  </action>
+  <action name="mActionMeasureArea">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/MeaArea.png</normaloff>:/examp2/Resources/MeaArea.png</iconset>
+   </property>
+   <property name="text">
+    <string>测面积</string>
+   </property>
+  </action>
+  <action name="mActionTextAnnotation">
+   <property name="text">
+    <string>Text</string>
+   </property>
+  </action>
+  <action name="mActionSvgAnnotation">
+   <property name="text">
+    <string>SVG</string>
+   </property>
+  </action>
+  <action name="mActionFeatureAction">
+   <property name="text">
+    <string>要素</string>
+   </property>
+  </action>
+  <action name="mActionSelectRadius">
+   <property name="text">
+    <string>圈选</string>
+   </property>
+  </action>
+  <action name="mActionSelectFeatures">
+   <property name="icon">
+    <iconset resource="examp2.qrc">
+     <normaloff>:/examp2/Resources/Sel.png</normaloff>:/examp2/Resources/Sel.png</iconset>
+   </property>
+   <property name="text">
+    <string>框选</string>
+   </property>
+  </action>
+  <action name="mActionDeselectAll">
+   <property name="text">
+    <string>清除</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="2" margin="4"/>
+ <resources>
+  <include location="examp2.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>checkBox_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examp2Class</receiver>
+   <slot>EnableLayer2(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>65</x>
+     <y>455</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examp2Class</receiver>
+   <slot>EnableLayer1(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>97</x>
+     <y>428</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>540</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_4</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examp2Class</receiver>
+   <slot>EnableLabel1(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>561</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_5</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examp2Class</receiver>
+   <slot>EnableLayer2(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>584</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>657</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_2</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>examp2Class</receiver>
+   <slot>SelectField(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>233</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>examp2Class</receiver>
+   <slot>SelectLayer(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>184</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget_3</sender>
+   <signal>itemDoubleClicked(QListWidgetItem*)</signal>
+   <receiver>examp2Class</receiver>
+   <slot>SelectFeature(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>285</x>
+     <y>321</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>EnableLayer1(bool)</slot>
+  <slot>EnableLayer2(bool)</slot>
+  <slot>EnableLabel1(bool)</slot>
+  <slot>EnableLabel2(bool)</slot>
+  <slot>SelectLayer(QListWidgetItem*)</slot>
+  <slot>SelectField(QListWidgetItem*)</slot>
+  <slot>SelectFeature(QListWidgetItem*)</slot>
+ </slots>
+</ui>

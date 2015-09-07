@@ -1,0 +1,338 @@
+/********************************************************************************
+** Form generated from reading UI file 'examp2.ui'
+**
+** Created by: Qt User Interface Compiler version 4.8.6
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_EXAMP2_H
+#define UI_EXAMP2_H
+
+#include <QtCore/QVariant>
+#include <QtGui/QAction>
+#include <QtGui/QApplication>
+#include <QtGui/QButtonGroup>
+#include <QtGui/QCheckBox>
+#include <QtGui/QDockWidget>
+#include <QtGui/QGroupBox>
+#include <QtGui/QHeaderView>
+#include <QtGui/QLabel>
+#include <QtGui/QListWidget>
+#include <QtGui/QMainWindow>
+#include <QtGui/QMenu>
+#include <QtGui/QMenuBar>
+#include <QtGui/QStatusBar>
+#include <QtGui/QToolBar>
+#include <QtGui/QVBoxLayout>
+#include <QtGui/QWidget>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_examp2Class
+{
+public:
+    QAction *qtID_AddVector;
+    QAction *qtID_ZoomIn;
+    QAction *qtID_ZoomOut;
+    QAction *qtID_Pan;
+    QAction *qtID_FullShow;
+    QAction *qtID_Exit;
+    QAction *qtID_SelectFeature;
+    QAction *qtID_DeleFeature;
+    QAction *qtID_GetAttribute;
+    QAction *qtID_PolyLine;
+    QAction *qtID_Polygon;
+    QWidget *centralWidget;
+    QVBoxLayout *verticalLayout;
+    QWidget *MapWindow;
+    QMenuBar *menuBar;
+    QMenu *qtID_File;
+    QMenu *qtID_Draw;
+    QToolBar *mainToolBar;
+    QStatusBar *statusBar;
+    QDockWidget *LegenddockWidget;
+    QWidget *dockWidgetContents_2;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label_3;
+    QListWidget *listWidget;
+    QLabel *label;
+    QListWidget *listWidget_2;
+    QLabel *label_2;
+    QListWidget *listWidget_3;
+    QDockWidget *LayerControlWidget;
+    QWidget *dockWidgetContents;
+    QVBoxLayout *verticalLayout_2;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_3;
+    QGroupBox *groupBox;
+    QCheckBox *checkBox;
+    QCheckBox *checkBox_2;
+    QCheckBox *checkBox_3;
+    QGroupBox *groupBox_2;
+    QCheckBox *checkBox_4;
+    QCheckBox *checkBox_5;
+
+    void setupUi(QMainWindow *examp2Class)
+    {
+        if (examp2Class->objectName().isEmpty())
+            examp2Class->setObjectName(QString::fromUtf8("examp2Class"));
+        examp2Class->resize(780, 677);
+        qtID_AddVector = new QAction(examp2Class);
+        qtID_AddVector->setObjectName(QString::fromUtf8("qtID_AddVector"));
+        qtID_ZoomIn = new QAction(examp2Class);
+        qtID_ZoomIn->setObjectName(QString::fromUtf8("qtID_ZoomIn"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/examp2/Resources/mActionZoomIn.png"), QSize(), QIcon::Normal, QIcon::Off);
+        qtID_ZoomIn->setIcon(icon);
+        qtID_ZoomOut = new QAction(examp2Class);
+        qtID_ZoomOut->setObjectName(QString::fromUtf8("qtID_ZoomOut"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/examp2/Resources/mActionZoomOut.png"), QSize(), QIcon::Normal, QIcon::Off);
+        qtID_ZoomOut->setIcon(icon1);
+        qtID_Pan = new QAction(examp2Class);
+        qtID_Pan->setObjectName(QString::fromUtf8("qtID_Pan"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/examp2/Resources/mActionPan.png"), QSize(), QIcon::Normal, QIcon::Off);
+        qtID_Pan->setIcon(icon2);
+        qtID_FullShow = new QAction(examp2Class);
+        qtID_FullShow->setObjectName(QString::fromUtf8("qtID_FullShow"));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/examp2/Resources/mActionZoomFullExtent.png"), QSize(), QIcon::Normal, QIcon::Off);
+        qtID_FullShow->setIcon(icon3);
+        qtID_Exit = new QAction(examp2Class);
+        qtID_Exit->setObjectName(QString::fromUtf8("qtID_Exit"));
+        qtID_SelectFeature = new QAction(examp2Class);
+        qtID_SelectFeature->setObjectName(QString::fromUtf8("qtID_SelectFeature"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/examp2/Resources/mActionSelect.png"), QSize(), QIcon::Normal, QIcon::Off);
+        qtID_SelectFeature->setIcon(icon4);
+        qtID_DeleFeature = new QAction(examp2Class);
+        qtID_DeleFeature->setObjectName(QString::fromUtf8("qtID_DeleFeature"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/examp2/Resources/mActionDeleteSelected.png"), QSize(), QIcon::Normal, QIcon::Off);
+        qtID_DeleFeature->setIcon(icon5);
+        qtID_GetAttribute = new QAction(examp2Class);
+        qtID_GetAttribute->setObjectName(QString::fromUtf8("qtID_GetAttribute"));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/examp2/Resources/mActionAddLayer.png"), QSize(), QIcon::Normal, QIcon::Off);
+        qtID_GetAttribute->setIcon(icon6);
+        qtID_PolyLine = new QAction(examp2Class);
+        qtID_PolyLine->setObjectName(QString::fromUtf8("qtID_PolyLine"));
+        qtID_Polygon = new QAction(examp2Class);
+        qtID_Polygon->setObjectName(QString::fromUtf8("qtID_Polygon"));
+        centralWidget = new QWidget(examp2Class);
+        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        verticalLayout = new QVBoxLayout(centralWidget);
+        verticalLayout->setSpacing(2);
+        verticalLayout->setContentsMargins(4, 4, 4, 4);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        MapWindow = new QWidget(centralWidget);
+        MapWindow->setObjectName(QString::fromUtf8("MapWindow"));
+        MapWindow->setCursor(QCursor(Qt::CrossCursor));
+        MapWindow->setAutoFillBackground(false);
+        MapWindow->setStyleSheet(QString::fromUtf8("color: rgb(74, 255, 74);"));
+
+        verticalLayout->addWidget(MapWindow);
+
+        examp2Class->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(examp2Class);
+        menuBar->setObjectName(QString::fromUtf8("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 780, 17));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
+        font.setPointSize(9);
+        menuBar->setFont(font);
+        qtID_File = new QMenu(menuBar);
+        qtID_File->setObjectName(QString::fromUtf8("qtID_File"));
+        qtID_File->setFont(font);
+        qtID_Draw = new QMenu(menuBar);
+        qtID_Draw->setObjectName(QString::fromUtf8("qtID_Draw"));
+        qtID_Draw->setFont(font);
+        examp2Class->setMenuBar(menuBar);
+        mainToolBar = new QToolBar(examp2Class);
+        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
+        examp2Class->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        statusBar = new QStatusBar(examp2Class);
+        statusBar->setObjectName(QString::fromUtf8("statusBar"));
+        examp2Class->setStatusBar(statusBar);
+        LegenddockWidget = new QDockWidget(examp2Class);
+        LegenddockWidget->setObjectName(QString::fromUtf8("LegenddockWidget"));
+        LegenddockWidget->setMinimumSize(QSize(122, 287));
+        dockWidgetContents_2 = new QWidget();
+        dockWidgetContents_2->setObjectName(QString::fromUtf8("dockWidgetContents_2"));
+        verticalLayout_4 = new QVBoxLayout(dockWidgetContents_2);
+        verticalLayout_4->setSpacing(2);
+        verticalLayout_4->setContentsMargins(4, 4, 4, 4);
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        label_3 = new QLabel(dockWidgetContents_2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        verticalLayout_4->addWidget(label_3);
+
+        listWidget = new QListWidget(dockWidgetContents_2);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setFont(font);
+        listWidget->setFrameShape(QFrame::StyledPanel);
+        listWidget->setFrameShadow(QFrame::Sunken);
+        listWidget->setMovement(QListView::Static);
+
+        verticalLayout_4->addWidget(listWidget);
+
+        label = new QLabel(dockWidgetContents_2);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        verticalLayout_4->addWidget(label);
+
+        listWidget_2 = new QListWidget(dockWidgetContents_2);
+        listWidget_2->setObjectName(QString::fromUtf8("listWidget_2"));
+
+        verticalLayout_4->addWidget(listWidget_2);
+
+        label_2 = new QLabel(dockWidgetContents_2);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        verticalLayout_4->addWidget(label_2);
+
+        listWidget_3 = new QListWidget(dockWidgetContents_2);
+        listWidget_3->setObjectName(QString::fromUtf8("listWidget_3"));
+        listWidget_3->setFont(font);
+
+        verticalLayout_4->addWidget(listWidget_3);
+
+        LegenddockWidget->setWidget(dockWidgetContents_2);
+        examp2Class->addDockWidget(static_cast<Qt::DockWidgetArea>(1), LegenddockWidget);
+        LayerControlWidget = new QDockWidget(examp2Class);
+        LayerControlWidget->setObjectName(QString::fromUtf8("LayerControlWidget"));
+        LayerControlWidget->setMinimumSize(QSize(206, 298));
+        dockWidgetContents = new QWidget();
+        dockWidgetContents->setObjectName(QString::fromUtf8("dockWidgetContents"));
+        verticalLayout_2 = new QVBoxLayout(dockWidgetContents);
+        verticalLayout_2->setSpacing(3);
+        verticalLayout_2->setContentsMargins(4, 4, 4, 4);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        widget = new QWidget(dockWidgetContents);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        verticalLayout_3 = new QVBoxLayout(widget);
+        verticalLayout_3->setSpacing(3);
+        verticalLayout_3->setContentsMargins(4, 4, 4, 4);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        groupBox = new QGroupBox(widget);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        checkBox = new QCheckBox(groupBox);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(10, 20, 121, 20));
+        checkBox->setIcon(icon6);
+        checkBox->setChecked(true);
+        checkBox_2 = new QCheckBox(groupBox);
+        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+        checkBox_2->setGeometry(QRect(10, 50, 48, 17));
+        checkBox_3 = new QCheckBox(groupBox);
+        checkBox_3->setObjectName(QString::fromUtf8("checkBox_3"));
+        checkBox_3->setGeometry(QRect(10, 80, 71, 17));
+
+        verticalLayout_3->addWidget(groupBox);
+
+        groupBox_2 = new QGroupBox(widget);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        checkBox_4 = new QCheckBox(groupBox_2);
+        checkBox_4->setObjectName(QString::fromUtf8("checkBox_4"));
+        checkBox_4->setGeometry(QRect(11, 23, 81, 17));
+        checkBox_5 = new QCheckBox(groupBox_2);
+        checkBox_5->setObjectName(QString::fromUtf8("checkBox_5"));
+        checkBox_5->setGeometry(QRect(11, 46, 48, 17));
+
+        verticalLayout_3->addWidget(groupBox_2);
+
+
+        verticalLayout_2->addWidget(widget);
+
+        LayerControlWidget->setWidget(dockWidgetContents);
+        examp2Class->addDockWidget(static_cast<Qt::DockWidgetArea>(1), LayerControlWidget);
+
+        menuBar->addAction(qtID_File->menuAction());
+        menuBar->addAction(qtID_Draw->menuAction());
+        qtID_File->addAction(qtID_AddVector);
+        qtID_File->addSeparator();
+        qtID_File->addAction(qtID_Exit);
+        qtID_Draw->addAction(qtID_PolyLine);
+        qtID_Draw->addAction(qtID_Polygon);
+        mainToolBar->addAction(qtID_ZoomIn);
+        mainToolBar->addAction(qtID_ZoomOut);
+        mainToolBar->addAction(qtID_Pan);
+        mainToolBar->addAction(qtID_FullShow);
+        mainToolBar->addSeparator();
+        mainToolBar->addAction(qtID_SelectFeature);
+        mainToolBar->addAction(qtID_DeleFeature);
+        mainToolBar->addSeparator();
+        mainToolBar->addAction(qtID_GetAttribute);
+
+        retranslateUi(examp2Class);
+        QObject::connect(checkBox_2, SIGNAL(toggled(bool)), examp2Class, SLOT(EnableLayer2(bool)));
+        QObject::connect(checkBox, SIGNAL(toggled(bool)), examp2Class, SLOT(EnableLayer1(bool)));
+        QObject::connect(checkBox_4, SIGNAL(toggled(bool)), examp2Class, SLOT(EnableLabel1(bool)));
+        QObject::connect(checkBox_5, SIGNAL(toggled(bool)), examp2Class, SLOT(EnableLayer2(bool)));
+        QObject::connect(listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), examp2Class, SLOT(SelectLayer(QListWidgetItem*)));
+        QObject::connect(listWidget_2, SIGNAL(itemDoubleClicked(QListWidgetItem*)), examp2Class, SLOT(SelectField(QListWidgetItem*)));
+        QObject::connect(listWidget_3, SIGNAL(itemDoubleClicked(QListWidgetItem*)), examp2Class, SLOT(SelectFeature(QListWidgetItem*)));
+
+        QMetaObject::connectSlotsByName(examp2Class);
+    } // setupUi
+
+    void retranslateUi(QMainWindow *examp2Class)
+    {
+        examp2Class->setWindowTitle(QApplication::translate("examp2Class", "examp2", 0, QApplication::UnicodeUTF8));
+        qtID_AddVector->setText(QApplication::translate("examp2Class", "\345\212\240\350\275\275\347\237\242\351\207\217\345\233\276(&V)", 0, QApplication::UnicodeUTF8));
+        qtID_ZoomIn->setText(QApplication::translate("examp2Class", "\346\224\276\345\244\247\345\233\276\345\261\202", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        qtID_ZoomIn->setToolTip(QApplication::translate("examp2Class", "\346\224\276\345\244\247\345\233\276\345\261\202", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        qtID_ZoomOut->setText(QApplication::translate("examp2Class", "\347\274\251\345\260\217\345\233\276\345\261\202", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        qtID_ZoomOut->setToolTip(QApplication::translate("examp2Class", "\347\274\251\345\260\217\345\233\276\345\261\202", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        qtID_Pan->setText(QApplication::translate("examp2Class", "\347\247\273\345\212\250\345\233\276\345\261\202", 0, QApplication::UnicodeUTF8));
+        qtID_FullShow->setText(QApplication::translate("examp2Class", "\345\205\250\345\233\276\346\230\276\347\244\272", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        qtID_FullShow->setToolTip(QApplication::translate("examp2Class", "\345\205\250\345\233\276\346\230\276\347\244\272", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        qtID_Exit->setText(QApplication::translate("examp2Class", "\351\200\200\345\207\272", 0, QApplication::UnicodeUTF8));
+        qtID_SelectFeature->setText(QApplication::translate("examp2Class", "\351\200\211\346\213\251\345\233\276\345\261\202\350\246\201\347\264\240", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        qtID_SelectFeature->setToolTip(QApplication::translate("examp2Class", "\351\200\211\346\213\251\345\233\276\345\261\202\347\211\271\345\276\201\350\246\201\347\264\240", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        qtID_DeleFeature->setText(QApplication::translate("examp2Class", "\345\210\240\351\231\244\351\200\211\346\213\251\347\232\204\347\211\271\345\276\201\350\246\201\347\264\240", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        qtID_DeleFeature->setToolTip(QApplication::translate("examp2Class", "\345\210\240\351\231\244\351\200\211\346\213\251\347\232\204\347\211\271\345\276\201\350\246\201\347\264\240", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        qtID_GetAttribute->setText(QApplication::translate("examp2Class", "\345\275\223\345\211\215\351\200\211\346\213\251\345\233\276\345\205\203\347\232\204\345\261\236\346\200\247\346\225\260\346\215\256", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        qtID_GetAttribute->setToolTip(QApplication::translate("examp2Class", "\345\276\227\345\210\260\345\275\223\345\211\215\351\200\211\346\213\251\345\233\276\345\205\203\347\232\204\345\261\236\346\200\247\346\225\260\346\215\256", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        qtID_PolyLine->setText(QApplication::translate("examp2Class", "\347\273\230\345\210\266\346\212\230\347\272\277(&L)", 0, QApplication::UnicodeUTF8));
+        qtID_Polygon->setText(QApplication::translate("examp2Class", "\347\273\230\345\210\266\345\244\232\350\276\271\345\275\242(&P)", 0, QApplication::UnicodeUTF8));
+        qtID_File->setTitle(QApplication::translate("examp2Class", "\346\226\207\344\273\266(&F)", 0, QApplication::UnicodeUTF8));
+        qtID_Draw->setTitle(QApplication::translate("examp2Class", "\347\273\230\345\233\276\345\267\245\345\205\267(&D)", 0, QApplication::UnicodeUTF8));
+        LegenddockWidget->setWindowTitle(QApplication::translate("examp2Class", "\345\233\276\345\261\202\344\277\241\346\201\257\346\237\245\350\257\242", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("examp2Class", "\351\200\211\346\213\251\345\233\276\345\261\202", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("examp2Class", "\345\233\276\345\261\202\345\255\227\346\256\265", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("examp2Class", "\345\261\236\346\200\247\345\200\274", 0, QApplication::UnicodeUTF8));
+        LayerControlWidget->setWindowTitle(QApplication::translate("examp2Class", "\345\233\276\345\261\202\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("examp2Class", "\346\230\276\347\244\272/\351\232\220\350\227\217\345\233\276\345\261\202", 0, QApplication::UnicodeUTF8));
+        checkBox->setText(QApplication::translate("examp2Class", "\345\216\277\346\224\277\345\272\234\351\251\273\345\234\260", 0, QApplication::UnicodeUTF8));
+        checkBox_2->setText(QApplication::translate("examp2Class", "\346\262\263\346\265\201", 0, QApplication::UnicodeUTF8));
+        checkBox_3->setText(QApplication::translate("examp2Class", "\345\216\277\347\272\247\346\224\277\345\214\272", 0, QApplication::UnicodeUTF8));
+        groupBox_2->setTitle(QApplication::translate("examp2Class", "\345\233\276\345\261\202\346\263\250\350\256\260", 0, QApplication::UnicodeUTF8));
+        checkBox_4->setText(QApplication::translate("examp2Class", "\345\216\277\346\224\277\345\272\234\351\251\273\345\234\260", 0, QApplication::UnicodeUTF8));
+        checkBox_5->setText(QApplication::translate("examp2Class", "\346\262\263\346\265\201", 0, QApplication::UnicodeUTF8));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class examp2Class: public Ui_examp2Class {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_EXAMP2_H

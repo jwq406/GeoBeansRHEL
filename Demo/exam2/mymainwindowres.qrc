@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/srs.db</file>
+        <file>Resources/ZoomIn.png</file>
+        <file>Resources/ZoomOut.png</file>
+        <file>Resources/mActionFullMap.png</file>
+        <file>Resources/mActionNext.png</file>
+        <file>Resources/mActionPan.png</file>
+        <file>Resources/mActionPrevious.png</file>
+        <file>Resources/mActionRefresh.png</file>
+        <file>Resources/mActionAddMapService.png</file>
+        <file>Resources/mActionAddRasterLayer.png</file>
+        <file>Resources/mActionAddVectorLayer.png</file>
+        <file>Resources/mActionRemoveLayer.png</file>
+        <file>Resources/mActionAddGroupLayer.png</file>
+        <file>Resources/mActionMeasureArea.png</file>
+        <file>Resources/mActionMeasureDistance.png</file>
+        <file>Resources/mActionPolySelection.png</file>
+        <file>Resources/mActionRectSelection.png</file>
+        <file>Resources/mActionCircleSelection.png</file>
+        <file>Resources/mActionClearSelection.png</file>
+        <file>Resources/mActionPntSelection.png</file>
+        <file>Resources/mActionCloseProject.png</file>
+        <file>Resources/mActionOpenProject.png</file>
+        <file>Resources/mActionSaveAsProject.png</file>
+        <file>Resources/mActionSaveProject.png</file>
+        <file>Resources/mActionAbout.png</file>
+        <file>Resources/mActionExit.png</file>
+        <file>Resources/mActionHelpDocs.png</file>
+        <file>Resources/mActionAddBookmark.png</file>
+        <file>Resources/mActionBookmarkManager.png</file>
+        <file>Resources/mActionDrawLine.png</file>
+        <file>Resources/mActionDrawPolygon.png</file>
+        <file>Resources/mActionLayOut.png</file>
+        <file>Resources/mActionPrint.png</file>
+        <file>Resources/mActionFullScreen.png</file>
+        <file>Resources/mActionOpenSymbolLibrary.png</file>
+        <file>Resources/mActionOptions.png</file>
+        <file>Resources/mActionSVG.png</file>
+        <file>Resources/mActionText.png</file>
+        <file>Resources/BFMapMaker.bmp</file>
+        <file>Resources/mAction3DView.png</file>
+        <file>Resources/mActionCollapse.png</file>
+        <file>Resources/mActionExpand.png</file>
+        <file>Resources/BFMapMaker.ico</file>
+    </qresource>
+</RCC>
